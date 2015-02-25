@@ -2,4 +2,7 @@
 <resources>
     <string name="default_text">--</string>
     <string name="app_name">Oxyrem: Patient</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_world">Hello world! Here lies the future home of our awesome application!</string>
+    <string name="action_settings">Settings</string>
 </resources>

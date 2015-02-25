@@ -16,7 +16,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.oxyrem.patient.R;
+import com.jwetherell.heart_rate_monitor.R;
 
 
 /**
