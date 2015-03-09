@@ -1,42 +1,45 @@
-package com.jwetherell.heart_rate_monitor;
-
-import java.util.concurrent.atomic.AtomicBoolean;
+package com.oxyrem.patient.gui;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.res.Configuration;
 import android.hardware.Camera;
-import android.hardware.Camera.PreviewCallback;
 import android.os.Bundle;
 import android.os.PowerManager;
-import android.os.PowerManager.WakeLock;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.jwetherell.heart_rate_monitor.R;
+import com.oxyrem.patient.R;
 
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * This class extends Activity to handle a picture preview, process the preview
- * for a red values and determine a heart beat.
- * 
- * @author Justin Wetherell <phishman3579@gmail.com>
- */
+* This class extends Activity to handle a picture preview, process the preview
+* for a red values and determine a heart beat.
+* Base code was pulled from GitHub and the original author was
+* Justin Wetherell <phishman3579@gmail.com>
+**/
+
 public class HeartRateMonitor extends Activity {
 
     private static final String TAG = "HeartRateMonitor";
     private static final AtomicBoolean processing = new AtomicBoolean(false);
 
     private static SurfaceView preview = null;
+    private static ImageView previewImg = null;
     private static SurfaceHolder previewHolder = null;
     private static Camera camera = null;
     private static View image = null;
     private static TextView text = null;
 
-    private static WakeLock wakeLock = null;
+    private static PowerManager.WakeLock wakeLock = null;
 
     private static int averageIndex = 0;
     private static final int averageArraySize = 4;
@@ -44,7 +47,7 @@ public class HeartRateMonitor extends Activity {
 
     public static enum TYPE {
         GREEN, RED
-    };
+    }
 
     private static TYPE currentType = TYPE.GREEN;
 
@@ -58,18 +61,20 @@ public class HeartRateMonitor extends Activity {
     private static double beats = 0;
     private static long startTime = 0;
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.activity_heart_rate_monitor);
 
-        preview = (SurfaceView) findViewById(R.id.preview);
-        previewHolder = preview.getHolder();
-        previewHolder.addCallback(surfaceCallback);
-        previewHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+       previewImg = (ImageView) findViewById(R.id.img_preview);
+       Animation pulse = AnimationUtils.loadAnimation(this, R.anim.pulse);
+       previewImg.startAnimation(pulse);
+       //previewImg.setVisibility(View.VISIBLE);
+
+       preview = (SurfaceView) findViewById(R.id.preview);
+       previewHolder = preview.getHolder();
+       previewHolder.addCallback(surfaceCallback);
+       previewHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
 
         image = findViewById(R.id.image);
         text = (TextView) findViewById(R.id.text);
@@ -78,19 +83,31 @@ public class HeartRateMonitor extends Activity {
         wakeLock = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK, "DoNotDimScreen");
     }
 
-    /**
-     * {@inheritDoc}
-     */
+
     @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
     }
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
-    public void onResume() {
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onResume() {
         super.onResume();
 
         wakeLock.acquire();
@@ -100,11 +117,8 @@ public class HeartRateMonitor extends Activity {
         startTime = System.currentTimeMillis();
     }
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
-    public void onPause() {
+    protected void onPause() {
         super.onPause();
 
         wakeLock.release();
@@ -115,7 +129,7 @@ public class HeartRateMonitor extends Activity {
         camera = null;
     }
 
-    private static PreviewCallback previewCallback = new PreviewCallback() {
+    private static Camera.PreviewCallback previewCallback = new Camera.PreviewCallback() {
 
         /**
          * {@inheritDoc}
@@ -131,7 +145,7 @@ public class HeartRateMonitor extends Activity {
             int width = size.width;
             int height = size.height;
 
-            int imgAvg = ImageProcessing.decodeYUV420SPtoRedAvg(data.clone(), height, width);
+            int imgAvg = ImageProcessing.decodeYUV420SPtoRedAvg(data.clone(), width, height);
             // Log.i(TAG, "imgAvg="+imgAvg);
             if (imgAvg == 0 || imgAvg == 255) {
                 processing.set(false);
@@ -198,6 +212,7 @@ public class HeartRateMonitor extends Activity {
                 }
                 int beatsAvg = (beatsArrayAvg / beatsArrayCnt);
                 text.setText(String.valueOf(beatsAvg));
+                previewImg.setVisibility(View.VISIBLE);
                 startTime = System.currentTimeMillis();
                 beats = 0;
             }
@@ -243,6 +258,8 @@ public class HeartRateMonitor extends Activity {
         public void surfaceDestroyed(SurfaceHolder holder) {
             // Ignore
         }
+
+
     };
 
     private static Camera.Size getSmallestPreviewSize(int width, int height, Camera.Parameters parameters) {
@@ -263,4 +280,6 @@ public class HeartRateMonitor extends Activity {
 
         return result;
     }
+
+
 }
