@@ -21,11 +21,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.oxyrem.patient" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffa9cfb5-d4ce-42f5-b994-e888e6c11072" name="Default" comment="button styles">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/oxyrem/patient/gui/HeartbeatView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/oxyrem/patient/gui/HeartbeatView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/home_button.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/home_button.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/drawable/rounded.xml" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rounded.xml" />
+    <list default="true" id="ffa9cfb5-d4ce-42f5-b994-e888e6c11072" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="android-heart-rate-monitor.iws" />
@@ -1204,7 +1200,11 @@
       <created>1425931437769</created>
       <updated>1425931437769</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="button styles">
+      <created>1425954467798</created>
+      <updated>1425954467798</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
