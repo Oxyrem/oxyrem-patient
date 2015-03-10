@@ -153,6 +153,7 @@ public class HeartRateMonitor extends Activity {
             }*/
             if(imgAvg < 200){
                 processing.set(false);
+                startTime = System.currentTimeMillis();
                 return;
             }
 
@@ -190,7 +191,8 @@ public class HeartRateMonitor extends Activity {
             long endTime = System.currentTimeMillis();
             double totalTimeInSecs = (endTime - startTime) / 1000d; //TimeUnit.SECONDS.convert(elapsedTime, TimeUnit.NANOSECONDS)
             if (totalTimeInSecs >= 10) {
-               double bps = (beats / totalTimeInSecs);
+                double bps = (beats / totalTimeInSecs);
+                //int dpm = (int) beats * 4;
                 int dpm = (int) (bps * 60d);
                 if (dpm < 30 || dpm > 180) {
                     startTime = System.currentTimeMillis();

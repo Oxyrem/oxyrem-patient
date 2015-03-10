@@ -21,7 +21,10 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.oxyrem.patient" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffa9cfb5-d4ce-42f5-b994-e888e6c11072" name="Default" comment="">
+    <list default="true" id="ffa9cfb5-d4ce-42f5-b994-e888e6c11072" name="Default" comment="switched heartbeat simulator icons">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/oxyrem/patient/gui/HeartRateMonitor.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/oxyrem/patient/gui/HeartRateMonitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/oxyrem/patient/gui/HeartbeatView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/oxyrem/patient/gui/HeartbeatView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_heart_rate_monitor.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_heart_rate_monitor.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="android-heart-rate-monitor.iws" />
@@ -48,18 +51,21 @@
       <file leaf-file-name="HeartRateMonitor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/oxyrem/patient/gui/HeartRateMonitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45259392" vertical-offset="1889" max-vertical-offset="4556">
-              <caret line="152" column="15" selection-start-line="152" selection-start-column="15" selection-end-line="152" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.21824686" vertical-offset="2173" max-vertical-offset="4590">
+              <caret line="161" column="12" selection-start-line="161" selection-start-column="12" selection-end-line="161" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageProcessing.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/oxyrem/patient/gui/ImageProcessing.java">
+      <file leaf-file-name="activity_heart_rate_monitor.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_heart_rate_monitor.xml">
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1207">
-              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            <state vertical-scroll-proportion="-25.814816" vertical-offset="0" max-vertical-offset="833">
+              <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -68,8 +74,18 @@
       <file leaf-file-name="HeartbeatView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/oxyrem/patient/gui/HeartbeatView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1377">
-              <caret line="71" column="32" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="563" max-vertical-offset="1377">
+              <caret line="41" column="84" selection-start-line="41" selection-start-column="84" selection-end-line="41" selection-end-column="84" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageProcessing.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/oxyrem/patient/gui/ImageProcessing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1207">
+              <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -636,16 +652,16 @@
         <option value="$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/pulse.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_heart_rate_monitor.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/textcolor_home.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/oxyrem/patient/gui/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/rounded.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/home_button.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/oxyrem/patient/gui/HeartbeatView.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/anim/pulse.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/rounded_blue_white_bg.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_heart_rate_monitor.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/oxyrem/patient/gui/HeartRateMonitor.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/oxyrem/patient/gui/HeartbeatView.java" />
       </list>
     </option>
   </component>
@@ -817,7 +833,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="drawable" />
+              <option name="myItemId" value="drawable-mdpi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -928,38 +944,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="android-heart-rate-monitor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android-heart-rate-monitor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android-heart-rate-monitor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.oxyrem.patient" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1200,7 +1184,11 @@
       <created>1425957358456</created>
       <updated>1425957358456</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="improved finger on cam detection">
+      <created>1425957555974</created>
+      <updated>1425957555974</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1256,7 +1244,8 @@
     <MESSAGE value="minor customizations" />
     <MESSAGE value="button styles" />
     <MESSAGE value="improved finger on cam detection" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved finger on cam detection" />
+    <MESSAGE value="switched heartbeat simulator icons" />
+    <option name="LAST_COMMIT_MESSAGE" value="switched heartbeat simulator icons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1590,17 +1579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_heart_rate_monitor.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="799">
-          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -1636,24 +1614,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/oxyrem/patient/gui/ImageProcessing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1207">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1207">
+          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_heart_rate_monitor.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.814816" vertical-offset="0" max-vertical-offset="833">
+          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/oxyrem/patient/gui/HeartbeatView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="801" max-vertical-offset="1377">
-          <caret line="71" column="32" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="563" max-vertical-offset="1377">
+          <caret line="41" column="84" selection-start-line="41" selection-start-column="84" selection-end-line="41" selection-end-column="84" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-mdpi/lg_heart.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/oxyrem/patient/gui/HeartRateMonitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45259392" vertical-offset="1889" max-vertical-offset="4556">
-          <caret line="152" column="15" selection-start-line="152" selection-start-column="15" selection-end-line="152" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.21824686" vertical-offset="2173" max-vertical-offset="4590">
+          <caret line="161" column="12" selection-start-line="161" selection-start-column="12" selection-end-line="161" selection-end-column="12" />
           <folding />
         </state>
       </provider>
