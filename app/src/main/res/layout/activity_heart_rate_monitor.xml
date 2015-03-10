@@ -27,15 +27,17 @@
             </com.oxyrem.patient.gui.HeartbeatView>
         </RelativeLayout>
     </LinearLayout>
+
+    <SurfaceView android:id="@+id/preview"
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp">
+    </SurfaceView>
+
     <ImageView
         android:id="@+id/img_preview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:visibility="gone"
         android:src="@drawable/ic_heart"/>
-     <SurfaceView android:id="@+id/preview"
-        android:layout_weight="1"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp">
-    </SurfaceView>
 </LinearLayout>
