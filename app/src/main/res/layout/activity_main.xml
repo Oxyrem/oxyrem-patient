@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/hrmButton"
         android:text="@string/heartmonitor"
-        android:background="@drawable/home_button"
+        android:background="@drawable/rounded_blue_white_bg"
         android:textColor="@drawable/textcolor_home"
         android:layout_marginTop="@dimen/button_top_margin"
         android:layout_centerHorizontal="true"
@@ -26,7 +26,7 @@
         android:layout_marginTop="@dimen/button_top_margin"
         android:text="@string/history_button"
         android:id="@+id/historyButton"
-        android:background="@drawable/home_button"
+        android:background="@drawable/rounded_blue_white_bg"
         android:textColor="@drawable/textcolor_home"
         android:layout_below="@+id/hrmButton"
         android:layout_centerHorizontal="true" />

@@ -147,7 +147,11 @@ public class HeartRateMonitor extends Activity {
 
             int imgAvg = ImageProcessing.decodeYUV420SPtoRedAvg(data.clone(), width, height);
             // Log.i(TAG, "imgAvg="+imgAvg);
-            if (imgAvg == 0 || imgAvg == 255) {
+            /*if (imgAvg == 0 || imgAvg == 255) {
+                processing.set(false);
+                return;
+            }*/
+            if(imgAvg < 200){
                 processing.set(false);
                 return;
             }
