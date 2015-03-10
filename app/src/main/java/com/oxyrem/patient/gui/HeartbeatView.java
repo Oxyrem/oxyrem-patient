@@ -61,21 +61,24 @@ public class HeartbeatView extends View {
     protected void onDraw(Canvas canvas) {
         if (canvas == null) throw new NullPointerException();
 
-        Bitmap bitmap = null;
-        if (HeartRateMonitor.getCurrent() == HeartRateMonitor.TYPE.GREEN) bitmap = greenBitmap;
-        else bitmap = redBitmap;
+        Bitmap bitmap;
 
-        int bitmapX = bitmap.getWidth() / 2;
-        int bitmapY = bitmap.getHeight() / 2;
 
-        int parentX = parentWidth / 2;
-        int parentY = parentHeight / 2;
+         if (HeartRateMonitor.getCurrent() == HeartRateMonitor.TYPE.GREEN) bitmap = greenBitmap;
+         else bitmap = redBitmap;
 
-        int centerX = parentX - bitmapX;
-        int centerY = parentY - bitmapY;
 
-        matrix.reset();
-        matrix.postTranslate(centerX, centerY);
-        canvas.drawBitmap(bitmap, matrix, paint);
+         int bitmapX = bitmap.getWidth() / 2;
+         int bitmapY = bitmap.getHeight() / 2;
+
+         int parentX = parentWidth / 2;
+         int parentY = parentHeight / 2;
+
+         int centerX = parentX - bitmapX;
+         int centerY = parentY - bitmapY;
+
+         matrix.reset();
+         matrix.postTranslate(centerX, centerY);
+         canvas.drawBitmap(bitmap, matrix, paint);
     }
 }
