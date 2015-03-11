@@ -1,4 +1,4 @@
-package com.jwetherell.heart_rate_monitor;
+package com.oxyrem.patient.gui;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -31,15 +31,15 @@ public class HeartbeatView extends View {
     public HeartbeatView(Context context, AttributeSet attr) {
         super(context, attr);
 
-        greenBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.green_icon);
-        redBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.red_icon);
+        greenBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.sm_heart);
+        redBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.lg_heart);
     }
 
     public HeartbeatView(Context context) {
         super(context);
 
-        greenBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.green_icon);
-        redBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.red_icon);
+        greenBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.sm_heart);
+        redBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.lg_heart);
     }
 
     /**
@@ -61,21 +61,24 @@ public class HeartbeatView extends View {
     protected void onDraw(Canvas canvas) {
         if (canvas == null) throw new NullPointerException();
 
-        Bitmap bitmap = null;
-        if (HeartRateMonitor.getCurrent() == HeartRateMonitor.TYPE.GREEN) bitmap = greenBitmap;
-        else bitmap = redBitmap;
+        Bitmap bitmap;
 
-        int bitmapX = bitmap.getWidth() / 2;
-        int bitmapY = bitmap.getHeight() / 2;
 
-        int parentX = parentWidth / 2;
-        int parentY = parentHeight / 2;
+         if (HeartRateMonitor.getCurrent() == HeartRateMonitor.TYPE.GREEN) bitmap = greenBitmap;
+         else bitmap = redBitmap;
 
-        int centerX = parentX - bitmapX;
-        int centerY = parentY - bitmapY;
 
-        matrix.reset();
-        matrix.postTranslate(centerX, centerY);
-        canvas.drawBitmap(bitmap, matrix, paint);
+         int bitmapX = bitmap.getWidth() / 2;
+         int bitmapY = bitmap.getHeight() / 2;
+
+         int parentX = parentWidth / 2;
+         int parentY = parentHeight / 2;
+
+         int centerX = parentX - bitmapX;
+         int centerY = parentY - bitmapY;
+
+         matrix.reset();
+         matrix.postTranslate(centerX, centerY);
+         canvas.drawBitmap(bitmap, matrix, paint);
     }
 }
