@@ -1,7 +1,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
 tools:context="com.oxyrem.patient.gui.LoginActivity">
 
 <!-- Login progress -->
@@ -26,21 +26,20 @@ tools:context="com.oxyrem.patient.gui.LoginActivity">
 <!-- Login form -->
 
 <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:orientation="vertical"
     android:padding="0dp" >
 
     <ScrollView
         android:id="@+id/login_form"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@drawable/bg_login"
-        android:overScrollMode="never" >
+        android:background="@drawable/bg_login" >
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingTop="72dp" >
@@ -67,7 +66,7 @@ tools:context="com.oxyrem.patient.gui.LoginActivity">
 
             <EditText
                 android:id="@+id/editTextEmail"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_email"
                 android:imeOptions="actionNext"
@@ -77,7 +76,7 @@ tools:context="com.oxyrem.patient.gui.LoginActivity">
 
             <EditText
                 android:id="@+id/editTextPassword"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/prompt_password"
                 android:imeActionId="@+id/login"
@@ -89,14 +88,14 @@ tools:context="com.oxyrem.patient.gui.LoginActivity">
 
             <Button
                 android:id="@+id/sign_in_button"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/action_sign_in"
                 style="" />
 
             <Button
                 android:id="@+id/register_button"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/action_register"
                 style="" />

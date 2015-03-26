@@ -15,10 +15,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
-
-    dependencies {
-        compile 'com.firebase:firebase-client-android:2.2.3+'
-    }
 }
 
 dependencies {
