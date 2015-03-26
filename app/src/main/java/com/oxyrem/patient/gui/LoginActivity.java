@@ -1,4 +1,4 @@
-package com.oxyrem.patient.gui.libs;
+package com.oxyrem.patient.gui;
 
 import android.app.Activity;
 import android.os.Bundle;

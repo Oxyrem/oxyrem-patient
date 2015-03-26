@@ -34,7 +34,7 @@
             android:label="@string/title_activity_heart_rate_monitor" >
         </activity>
         <activity
-            android:name=".gui.libs.LoginActivity"
+            android:name=".gui.LoginActivity"
             android:label="@string/title_activity_login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
