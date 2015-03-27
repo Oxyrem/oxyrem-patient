@@ -1,19 +1,23 @@
 package com.oxyrem.patient.gui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.rengwuxian.materialedittext.MaterialEditText;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import com.oxyrem.patient.R;
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends Activity implements View.OnClickListener {
 
     @InjectView(R.id.editTextEmail) MaterialEditText mUsernameField;
     @InjectView(R.id.editTextPassword) MaterialEditText mPasswordField;
+    Button mSignInButton;
 
 
     @Override
@@ -27,6 +31,9 @@ public class LoginActivity extends Activity {
         mUsernameField.setPrimaryColor(getResources().getColor(R.color.steel_blue3));
         mPasswordField.setBaseColor(getResources().getColor(R.color.turquoise1));
         mPasswordField.setPrimaryColor(getResources().getColor(R.color.steel_blue3));
+
+        mSignInButton = (Button) findViewById(R.id.sign_in_button);
+        mSignInButton.setOnClickListener(this);
     }
 
 
@@ -50,5 +57,15 @@ public class LoginActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v.getId() == mSignInButton.getId()){
+
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
+            finish();
+        }
     }
 }
