@@ -5,7 +5,10 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.heinrichreimersoftware.materialdrawer.DrawerFrameLayout;
+import com.heinrichreimersoftware.materialdrawer.structure.DrawerProfile;
 import com.oxyrem.patient.R;
 
 public class MainActivity extends FragmentActivity {
@@ -15,7 +18,22 @@ public class MainActivity extends FragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_container);
+        setContentView(R.layout.activity_main);
+
+        DrawerFrameLayout drawer = (DrawerFrameLayout) findViewById(R.id.drawer);
+        drawer.setProfile(
+                new DrawerProfile()
+                        .setAvatar(getResources().getDrawable(R.drawable.profile_avatar))
+                        .setBackground(getResources().getDrawable(R.drawable.profile_bg))
+                        .setName(getString(R.string.profile_name))
+                        .setDescription(getString(R.string.profile_description))
+                        .setOnProfileClickListener(new DrawerProfile.OnProfileClickListener() {
+                            @Override
+                            public void onClick(DrawerProfile drawerProfile) {
+                                Toast.makeText(MainActivity.this, "Clicked profile", Toast.LENGTH_SHORT).show();
+                            }
+                        })
+        );
 
         // Check that the activity is using the layout version with
         // the fragment_container FrameLayout
@@ -25,11 +43,11 @@ public class MainActivity extends FragmentActivity {
                 return;
             }
 
-            android.support.v4.app.Fragment homeFragment = null;
+           // android.support.v4.app.Fragment homeFragment = null;
 
             // Add the fragment to the 'fragment_container' FrameLayout
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.fragment_container, homeFragment).commit();
+           /* getSupportFragmentManager().beginTransaction()
+                    .add(R.id.fragment_container, homeFragment).commit();*/
         }
     }
 
