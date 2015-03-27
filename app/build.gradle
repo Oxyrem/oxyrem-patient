@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 android {
-    compileSdkVersion 7
+    compileSdkVersion 21
     buildToolsVersion "20.0.0"
 
     defaultConfig {
         applicationId "com.oxyrem.patient"
         minSdkVersion 7
-        targetSdkVersion 21
+        targetSdkVersion 22
     }
 
     buildTypes {
@@ -19,4 +19,7 @@ android {
 
 dependencies {
     compile files('libs/firebase-client-android-2.2.3.jar')
+    compile 'com.rengwuxian.materialedittext:library:1.8.3'
+    compile 'com.jakewharton:butterknife:6.1.0'
+    compile 'com.heinrichreimersoftware.materialdrawer:library:1.4.2'
 }

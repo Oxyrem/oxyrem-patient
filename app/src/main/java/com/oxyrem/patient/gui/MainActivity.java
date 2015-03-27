@@ -1,26 +1,36 @@
 package com.oxyrem.patient.gui;
 
-import android.app.Activity;
-import android.content.Intent;
+import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 import com.oxyrem.patient.R;
 
-public class MainActivity extends Activity implements View.OnClickListener {
+public class MainActivity extends FragmentActivity {
 
-    Button hrmButton;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.fragment_container);
 
-        hrmButton = (Button) findViewById(R.id.hrmButton);
-        hrmButton.setOnClickListener(this);
+        // Check that the activity is using the layout version with
+        // the fragment_container FrameLayout
+        if (findViewById(R.id.fragment_container) != null) {
+
+            if (savedInstanceState != null) {
+                return;
+            }
+
+            android.support.v4.app.Fragment homeFragment = null;
+
+            // Add the fragment to the 'fragment_container' FrameLayout
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.fragment_container, homeFragment).commit();
+        }
     }
 
 
@@ -44,15 +54,5 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.hrmButton:
-                Intent intent=new Intent(this,HeartRateMonitor.class);
-                startActivity(intent);
-                break;
-        }
     }
 }

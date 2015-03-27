@@ -5,14 +5,28 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.rengwuxian.materialedittext.MaterialEditText;
+import butterknife.ButterKnife;
+import butterknife.InjectView;
 import com.oxyrem.patient.R;
 
 public class LoginActivity extends Activity {
+
+    @InjectView(R.id.editTextEmail) MaterialEditText mUsernameField;
+    @InjectView(R.id.editTextPassword) MaterialEditText mPasswordField;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        ButterKnife.inject(this); // Injects the annotated MaterialEditTexts
+
+        mUsernameField.setBaseColor(getResources().getColor(R.color.turquoise1));
+        mUsernameField.setPrimaryColor(getResources().getColor(R.color.steel_blue3));
+        mPasswordField.setBaseColor(getResources().getColor(R.color.turquoise1));
+        mPasswordField.setPrimaryColor(getResources().getColor(R.color.steel_blue3));
     }
 
 

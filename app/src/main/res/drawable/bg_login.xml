@@ -4,11 +4,11 @@
     <!-- top Line -->
     <item>
         <shape android:shape="rectangle" >
-            <solid android:color="@color/light_sky_blue" />
+            <solid android:color="@color/deep_sky_blue" />
         </shape>
     </item>
     <!-- bg -->
-    <item android:top="3dp">
+    <item android:top="9dp">
         <shape android:shape="rectangle" >
             <solid android:color="@color/white" />
         </shape>
