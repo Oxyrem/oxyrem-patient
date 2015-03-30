@@ -8,8 +8,6 @@
         android:minSdkVersion="14"
         android:targetSdkVersion="22" />
 
-
-
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.flash" />
 
